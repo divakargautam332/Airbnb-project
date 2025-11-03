@@ -1,0 +1,56 @@
+<%- layout('layouts/boilerplate') %>
+
+    <body class="bg-light">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Sign up</h3>
+
+
+                            <!-- Form: novalidate + needs-validation -->
+                            <form action="/signup" method="post" novalidate class="needs-validation">
+
+
+                                <!-- Username -->
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" required
+                                        minlength="3" maxlength="30" placeholder="Choose a username">
+                                    <div class="invalid-feedback">Please choose a username (3+ characters).</div>
+                                </div>
+
+
+                                <!-- Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required
+                                        placeholder="you@example.com">
+                                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                                </div>
+
+
+                                <!-- Password -->
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required
+                                        minlength="8" placeholder="Enter a strong password">
+                                    <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary w-100">Sign up</button>
+                            </form>
+
+
+                            <hr>
+                            <small class="text-muted">Already have an account? <a href="/login">Log in</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
